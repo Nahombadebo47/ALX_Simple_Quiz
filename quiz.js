@@ -1,8 +1,8 @@
 function checkAnswer() {
     correctAnswer = '4'; 
-    let userAnswer = document.querySelector('input[name="quiz"]:checked'); 
+    let userAnswer = document.querySelector('input[name="quiz"]:checked').value; 
     let feedback = document.querySelector('#feedback');
-    if(userAnswer && userAnswer.value === correctAnswer) {
+    if(userAnswer === correctAnswer) {
         feedback.textContent = 'Correct! Well done.';
     } else{
         feedback.textContent = "That's incorrect. Try again!";
@@ -10,4 +10,4 @@ function checkAnswer() {
 }
 const subBtn = document.getElementById('submit-answer');
 
-subBtn.addEventListener('click', checkAnswer);
+subBtn.addEventListener('click', checkAnswer); 
